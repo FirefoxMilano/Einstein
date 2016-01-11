@@ -10,9 +10,74 @@
 		<meta name="author" content="Nicokant">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<style>
+		@font-face{
+			font-family: 'Header';
+			src: url('lib/css/head.tff');
+		}
+		.container{
+			width: 300px;
+			height: 150px;		
+		}
+		a{
+			width:inherit;
+			height:inherit;
+			z-index: 2;
+			position:absolute;
+			display: block;
+			background-color: #000;
+			opacity:0.6;
+			transition: opacity 200ms ease;
+		}
+
+		a:hover{
+			opacity: 0;
+		}
+
+		#slides{
+			display: flex;
+			flex-wrap: wrap;
+			align-item: center;
+			align-content: center;
+			height: inherit;
+			justify-content: center;
+		}
+
+		*{
+			font-family: 'Sans Serif';
+		}
+
+		h1{
+			color: #e3e3e3;
+			margin-bottom: 0px;
+			text-align: center;
+			font-family: 'Header';
+			font-size: 5rem;
+		}
+		p{
+			color:#d3d3d3;
+			text-align: center;
+		}
+
+		body{
+			background-color: #0095DD;
+		}
+		
+		</style>
 	</head>
 	<body>
-		<a href='web.html'>Il Web</a>
-		<a href='future.html'>Il Web del Futuro</a>
+		<h1>Il Web</h1>
+		<p>Slides a cura dei membri della Community italiana di Mozilla</p>
+		<div id='slides'>
+			<div class='container'>
+				<a class='overlay'href='web.html'></a>
+				<iframe src='web.html'></iframe>
+			</div>
+			<div class='container'>
+				<a class='overlay'href='future.html'></a>
+				<iframe src='future.html'></iframe>
+			</div>
+		</div>
 	</body>
 </html>
