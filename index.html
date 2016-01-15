@@ -18,46 +18,61 @@
 		}
 		.container{
 			width: 300px;
-			height: 150px;		
+			height: 150px;
+			margin: 20px;	
 		}
-		a{
+		#slides a{
 			width:inherit;
 			height:inherit;
 			z-index: 2;
 			position:absolute;
 			display: block;
 			background-color: #000;
-			opacity:0.6;
+			opacity:0.8;
 			transition: opacity 200ms ease;
+			color: white;
+			text-align: center;
+			line-height: 150px;
+			font-size: 2rem;
+			text-transform: uppercase;
 		}
 
-		a:hover{
-			opacity: 0;
+		#slides a:hover{
+			opacity: 0.1;
 		}
 
 		#slides{
+			width:100%;
 			display: flex;
-			flex-wrap: wrap;
-			align-item: center;
-			align-content: center;
+			align-items: center;
+			align-content: space-around;
 			height: inherit;
 			justify-content: center;
+			flex-wrap: wrap;
 		}
 
 		*{
 			font-family: 'Sans Serif';
 		}
 
-		h1{
+		h1, h2{
 			color: #e3e3e3;
 			margin-bottom: 0px;
 			text-align: center;
 			font-family: 'Header';
 			font-size: 5rem;
 		}
+
+		h2{
+			font-size: 4rem;
+		}
 		p{
 			color:#d3d3d3;
 			text-align: center;
+		}
+
+		a{
+			color: white;
 		}
 
 		body{
@@ -70,31 +85,41 @@
 		<h1>Il Web</h1>
 		<p>Slides a cura dei membri della Community italiana di Mozilla</p>
 		<div id='slides'>
-			<div class='container'>
-				<a class='overlay'href='web.html'></a>
+			<div class='container' style='order:1'>
+				<a class='overlay'href='web.html'>Il Web</a>
 				<iframe src='web.html'></iframe>
 			</div>
-			<div class='container'>
-				<a class='overlay'href='future.html'></a>
+			<div class='container' style='order:6'>
+				<a class='overlay'href='future.html'>next web</a>
 				<iframe src='future.html'></iframe>
 			</div>
-			<div class='container'>
-				<a class='overlay'href='https://flod.org/presentations/einstein_20160116.html#/'></a>
+			<div class='container' style='order:2'>
+				<a class='overlay'href='https://flod.org/presentations/einstein_20160116.html#/'>Mozilla</a>
 				<iframe src='https://flod.org/presentations/einstein_20160116.html/#'></iframe>
 			</div>
-			<div class='container'>
-				<a class='overlay'href='http://firefoxmilano.github.io/Web-CrossPlat-Presentation/?full#Cover'></a>
+			<div class='container' style='order:5'>
+				<a class='overlay'href='http://firefoxmilano.github.io/Web-CrossPlat-Presentation/?full#Cover'>Cross-Platform</a>
 				<iframe src='http://firefoxmilano.github.io/Web-CrossPlat-Presentation/?full#Cover'></iframe>
 			</div>
-			<div class='container'>
-				<a class='overlay'href='https://drugozzo.github.io/BabylonJs/'></a>
+			<div class='container' style='order:8'>
+				<a class='overlay'href='https://drugozzo.github.io/BabylonJs/'>3d - Babylon JS</a>
 				<iframe src='https://drugozzo.github.io/BabylonJs/'></iframe>
 			</div>
-			<div class='container'>
-				<a class='overlay'href='https://odisseo-nessuno.github.io/16-Gennaio/'></a>
-				<iframe src='https://odisseo-nessuno.github.io/16-Gennaio/'></iframe>
+			<div class='container' style='order:7'>
+				<a class='overlay'href='https://odisseo-nessuno.github.io/16-Gennaio/'>3d- Three Js</a>
+				<iframe src='https://odisseo-nessuno.github.io/16-Gennaio/?full#Cover'></iframe>
 			</div>
-
+			<div class='container' style='order:4'>
+				<a class='overlay'href='firefoxos.html'>Firefox OS</a>
+				<iframe src='firefoxos.html'></iframe>
+			</div>
 		</div>
+			<div>
+				<h2>Contatti</h2>
+				<ul>
+					<li><a href='http://mozillaitalia.github.io/'>Mozilla Italia</a></li>
+					<li><a href='http://firefoxmilano.it'>Firefox Club Milano</a></li>
+				</ul>
+			</div>
 	</body>
 </html>
